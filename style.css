@@ -1,3 +1,100 @@
-body {
-    background: red;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 20%);
+    --darkGrey: hsl(0, 0%, 12%);
+    --offBlack: hsl(0, 0%, 8%);
+}
+body{
+    font-family: inter;
+    height: 100vh;
+    overflow-y: hidden;
+    background-color: var(--offBlack);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 20px;
+}
+main{
+    background-color: var(--darkGrey);
+    border-radius: 10px;
+    padding: 1rem;
+    width: 35%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+  
+}
+.imageContainer{
+    align-self: center;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 176px;
+    height: 176px;
+}
+img{
+    width: 100%;
+    border-radius: 50%;
+}
+article {
+    align-self: center;
+}
+h2 {
+    color: var(--white);
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+h4{
+    color: var(--green);
+    font-weight: 600;
+}
+p{
+    margin-top: 10px;
+    color: var(--white);
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+section {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+a{
+    text-decoration: none;
+}
+section > a > div {
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--grey);
+    padding: 15px 5px; 
+    border-radius: 5px;
+    cursor: pointer;
+   
+}
+section > a > div:hover {
+    background-color: var(--green);
+    color: var(--offBlack);
+    
+}
+
+@media (max-width: 600px) {
+    main{
+        width: 80%;
+    }
 }
